@@ -1,0 +1,278 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+html {
+  box-sizing: border-box;
+  /* відміняє синій фон при дотику по обєктах на тачскірінах */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+  }
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+
+  background-color: var(--background_clr__main);
+  margin: 0;
+  @media screen and (min-width: 768px) {
+    height: 100%;
+  }
+}
+.section {
+  &.--1 {
+    flex-grow: 2;
+    flex-basis: 900px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    // min-width: 800px;
+    & .--1-1 {
+      margin: auto;
+      width: 450px;
+
+      @media screen and (min-width: 768px) {
+        // width: calc(100% - 8px);
+        width: 450px;
+      }
+    }
+    & .--1-2 {
+      margin: auto;
+      width: 450px;
+      @media screen and (min-width: 768px) {
+        // width: calc(100% - 8px);
+        width: 450px;
+      }
+    }
+  }
+  &.--2 {
+    flex-grow: 1;
+    flex-basis: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-y: auto;
+
+    max-height: 100%;
+  }
+}
+.container {
+  display: block;
+  position: relative;
+
+  margin: auto;
+  padding: 8px;
+
+  // max-width: 480px;
+
+  background-color: var(--background_clr__main);
+  &--box-outline {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    height: 100%;
+
+    margin: auto;
+    max-height: 100%;
+    // outline: 1px solid #fff;
+  }
+  @media screen and (max-width: 768px) {
+    overflow-y: auto;
+  }
+  // @media screen and (min-width: 768px) {
+  //   height: calc(100% - 42px);
+  // }
+  // @media screen and (min-width: 768px) {
+  //   max-width: 960px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   max-width: 1200px;
+  // }
+}
+/* ======================================= PRODUCTS SLICK */
+.slick-dotted.slick-slider {
+  margin: 0;
+}
+.slick {
+  &-dots {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  // &__container {
+  //   max-width: 480px;
+  // }
+  /*&-dots {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 30px;
+    background-color: #fff;
+    & li {
+      &.slick-active {
+        & button {
+          background-color: rgb(255, 122, 173);
+        }
+      }
+      & button:before {
+        display: none;
+      }
+      & button {
+        width: 30px;
+        height: 30px;
+
+        background-color: aqua;
+      }
+      &:nth-child(1) button {
+        background-position: center;
+      }
+    }
+  }*/
+  /*@media screen and (min-width: 768px) {
+    &__hero {
+      max-width: 480px;
+    }
+    &__container {
+      max-width: 480px;
+    }
+  }*/
+  /*@media screen and (min-width: 1180px) {
+    &__hero {
+      // width: 100%;
+    }
+    &__container {
+      max-width: 1180px;
+    }
+  }*/
+}
+.main-slick-container {
+  height: 100%;
+  overflow-y: auto;
+  & .slick-list {
+    height: 100%;
+  }
+  & .slick-track {
+    height: 100%;
+  }
+  & .slick-slide {
+    height: 100%;
+    & > div {
+      height: 100%;
+    }
+  }
+}
+/* ----------------- НОРМАЛІЗАЦІЯ -------------- */
+/*  ЗАГОЛОВКИ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+/* ПАРАГРАФИ  */
+p {
+  margin: 0;
+}
+/* ТАБЛИЦі */
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0;
+}
+th,
+td {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+/* СПИСКИ */
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 0px;
+}
+/* ПОСИЛАННЯ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* АДРЕСИ */
+address {
+  font-style: normal;
+}
+/* ЗОБРАЖЕННЯ */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* КНОПКИ */
+button {
+  user-select: none;
+  cursor: pointer;
+}
+/* ----------------- СКРИТІ ЕЛЕМЕНТИ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ----------------- SCROLLBAR */
+::-webkit {
+  &-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &-scrollbar-button {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  &-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+  }
+  &-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  // bimp
+  // --scrollbar-top-offset: 0px;
+  // --scrollbar-bottom-offset: 0px;
+  // --scrollbar-left-offset: 0px;
+  // --scrollbar-right-offset: 0px;
+}
+@media screen and (min-width: 1000px) {
+}

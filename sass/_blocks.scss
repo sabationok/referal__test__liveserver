@@ -1,0 +1,124 @@
+.block {
+  position: relative;
+//   display: flex;
+//   flex-direction: column;
+// align-content: stretch;
+
+  overflow: hidden;
+
+  box-shadow: var(--block-shadow);
+  background-color: var(--background_clr__second);
+  &__tittle {
+    line-height: 1.3;
+    color: #fff;
+  }
+  &__link {
+    white-space: nowrap;
+
+    color: #fff;
+
+    color: var(--brand_clr__1);
+    &:hover,
+    &:focus {
+      outline-style: none;
+    }
+  }
+  &__overflow {
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+  }
+  /* загальні */
+  & .header {
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    width: 100%;
+    min-height: 40px;
+    padding: 4px 8px;
+
+    background-color: var(--block-header-bckgrnd-clr);
+  }
+  & .content {
+    position: relative;
+
+    // display: flex;
+    // flex-direction: column;
+
+    // height: calc(100% - 45px);
+    height: 300px;
+
+    background-color: var(--background_clr__second);
+  }
+  & .footer {
+    display: block;
+    position: sticky;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+
+    height: 5px;
+    width: 100%;
+
+    background-color: var(--block-footer-bckgrnd-clr);
+  }
+  &.--balans {
+    height: 100%;
+    min-height: 400px;
+
+   
+    @media screen and (max-width: 480px) {
+      height: 400px;
+    }
+  }
+  &.--referals {
+    height: 100%;
+    min-height: 400px;
+
+    
+    @media screen and (max-width: 480px) {
+      height: 400px;
+    }
+  }
+  &.--invite {
+    // flex-grow: 1;
+    // flex-basis: 300px;
+
+    min-height: 200px;
+    
+  }
+  &.--send-bonuses {
+    // flex-grow: 1;
+    // flex-basis: 300px;
+    
+    min-height: 200px;
+    
+  }
+  &.--get-bonuses {
+    // flex-grow: 1;
+    // flex-basis: 300px;
+
+    min-height: 200px;
+    
+  }
+  &.--feedback {
+    // flex-grow: 1;
+    // flex-basis: 300px;
+
+    min-height: 200px;
+    
+  }
+  &.--invite,
+  &.--send-bonuses,
+  &.--get-bonuses,
+  &.--feedback {
+
+    margin: auto;
+    width: 450px;
+    max-width: calc(100% - 8px);
+  }
+}

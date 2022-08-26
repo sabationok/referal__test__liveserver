@@ -1,0 +1,19 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 0 8px;
+  background-color: var(--background_clr__second);
+  box-shadow: var(--header-shadow);
+  // &.--position {
+  // }
+  // &.--flex {
+  // }
+
+}
