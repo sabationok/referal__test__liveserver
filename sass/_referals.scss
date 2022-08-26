@@ -1,82 +1,96 @@
 .card-list {
   display: flex;
+  // display: none;
   flex-direction: column;
   gap: 8px;
 
   position: relative;
 
+  margin-left: auto;
+  width: calc(100% - 16px);
 
+  // transform-origin: right;
+  // transform: scaleX(0);
+  // transition: var(--timing-function__main);
+  & > .cards-container {
+    // display: none;
+  }
+  &:hover {
+    & > .cards-container {
+      // display: block;
+    }
+  }
 
   &.--line-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
     padding: 8px;
-    & > .--line-2 {
-      display: none;
-    }
-    & > .card {
-      transform: scaleX(0);
-    }
-    &:hover {
-      & > .--line-2 {
-        display: flex;
-        & > .card {
-          transform: scale(1);
-        }
-      }
-    }
-  }
-  &.--line-2 {
-    margin-left: auto;
-    width: calc(100% - 16px);
-    & > .--line-3 {
-      display: none;
-    }
-    & > .card {
-      transform: scaleX(0);
-    }
-    &:hover {
-      & > .--line-3 {
-        display: flex;
-        & > .card {
-          pointer-events: all;
-          transform: scale(1);
-        }
-      }
-    }
-  }
-  &.--line-3 {
-    margin-left: auto;
-    width: calc(100% - 16px);
-    & > .--line-4 {
 
-    }
-    & > .card {
-      transform: scaleX(0);
-    }
-    &:hover {
-      & > .--line-4 {
-        display: flex;
-        & > .card {
-          transform: scale(1);
-        }
-      }
-    }
+
+    // transform: scaleX(1);
+    // & > .--line-2 {
+    //   display: none;
+    // }
+    // & > .card {
+    //   transform: scaleX(0);
+    // }
+    // &:hover {
+    //   & > .--line-2 {
+    //     display: flex;
+    //     & > .card {
+    //       transform: scale(1);
+    //     }
+    //   }
+    // }
   }
-  &.--line-4 {
-    margin-left: auto;
-    width: calc(100% - 16px);
-    & > .card {
-      transform: scaleX(0);
-    }
-    &:hover {
-      & .--line-5 {
-        display: flex;
-        transform: scaleX(0);
-        & > .card {
-          transform: scale(1);
-        }
-      }
-    }
-  }
+  // &.--line-2 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+  //   // & > .--line-3 {
+  //   //   display: none;
+  //   // }
+  //   // & > .card {
+  //   //   transform: scaleX(0);
+  //   // }
+  //   // &:hover {
+  //   //   & > .--line-3 {
+  //   //     display: flex;
+  //   //     & > .card {
+  //   //       pointer-events: all;
+  //   //       transform: scale(1);
+  //   //     }
+  //   //   }
+  //   // }
+  // }
+  // &.--line-3 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+
+  // }
+  // &.--line-4 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+
+  // }
+  // &.--line-5 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+  // }
+  // &.--line-6 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+  // }
+  // &.--line-7 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+  // }
+  // &.--line-8 {
+  //   margin-left: auto;
+  //   width: calc(100% - 16px);
+
+  // }
 
   & .card {
     display: flex;
@@ -106,17 +120,29 @@
       display: inline;
     }
     &.--line-referer {
-      transform: scaleY(1);
+      // transform: scale(1);
     }
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.35);
-      // & + .card-list {
-      //   display: flex;
+      background-color: rgba(255, 187, 0, 0.4);
+      // background-color: rgba(255, 255, 255, 0.35);
+      // & + .cards-container {
+      //   & > .card-list {
+      //     display: block;
+      //     transform: scale(1);
+      //   }
       // }
     }
     &:focus {
-      background-color: rgba(255, 255, 255, 0.25);
+      background-color: rgba(255, 187, 0, 5);
+      // & + .cards-container {
+      //   & > .card-list {
+      //     display: flex;
+      //     flex-direction: column;
+      //     gap: 8px;
+      //     transform: scale(1);
+      //   }
+      // }
     }
   }
 }

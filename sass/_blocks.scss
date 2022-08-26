@@ -26,8 +26,8 @@
   &__overflow {
     overflow: auto;
 
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
   }
   /* загальні */
   & .header {
@@ -45,13 +45,6 @@
   }
   & .content {
     position: relative;
-
-    // display: flex;
-    // flex-direction: column;
-
-    // height: calc(100% - 45px);
-    height: 300px;
-
     background-color: var(--background_clr__second);
   }
   & .footer {
@@ -69,6 +62,7 @@
   &.--balans {
     height: 100%;
     min-height: 400px;
+    max-height: 600px;
 
    
     @media screen and (max-width: 480px) {
@@ -76,12 +70,19 @@
     }
   }
   &.--referals {
-    height: 100%;
-    min-height: 400px;
+    // height: 100%;
+    // min-height: 300px;
+    // max-height: 600px;
 
     
     @media screen and (max-width: 480px) {
       height: 400px;
+    }
+    & .content {
+      // height: calc(100% - 45px);
+
+      max-height: 400px;
+      overflow: auto;
     }
   }
   &.--invite {
