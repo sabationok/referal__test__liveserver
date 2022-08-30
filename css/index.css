@@ -349,6 +349,8 @@ button {
 /* ======================================= BLOCKS */
 .block {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   box-shadow: var(--block-shadow);
   background-color: var(--background_clr__second);
@@ -404,14 +406,9 @@ button {
     height: 400px;
   }
 }
-@media screen and (max-width: 480px) {
-  .block.--referals {
-    height: 400px;
-  }
-}
-.block.--referals .content {
-  max-height: 400px;
-  overflow: auto;
+.block.--referals {
+  height: 100%;
+  min-height: 500px;
 }
 .block.--invite {
   min-height: 200px;
@@ -999,6 +996,15 @@ button {
   margin-left: auto;
   width: calc(100% - 16px);
 }
+.card-list > .cards-container {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+}
+.card-list > .cards-container:hover, .card-list > .cards-container:focus {
+  display: block;
+  max-height: fit-content;
+}
 .card-list.--line-1 {
   display: flex;
   flex-direction: column;
@@ -1034,4 +1040,8 @@ button {
 }
 .card-list .card:focus {
   background-color: rgb(255, 187, 0);
+}
+.card-list .card:focus + .cards-container {
+  display: block;
+  max-height: fit-content;
 }/*# sourceMappingURL=index.css.map */

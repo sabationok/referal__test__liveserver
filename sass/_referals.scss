@@ -13,13 +13,20 @@
   // transform: scaleX(0);
   // transition: var(--timing-function__main);
   & > .cards-container {
-    // display: none;
-  }
-  &:hover {
-    & > .cards-container {
-      // display: block;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    &:hover,
+    &:focus {
+      display: block;
+      max-height: fit-content;
     }
   }
+  // &:hover {
+  //   & > .cards-container {
+  //     max-height: fit-content;
+  //   }
+  // }
 
   &.--line-1 {
     display: flex;
@@ -143,6 +150,10 @@
       //     transform: scale(1);
       //   }
       // }
+      & + .cards-container {
+        display: block;
+        max-height: fit-content;
+      }
     }
   }
 }
