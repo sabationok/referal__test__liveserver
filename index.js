@@ -12,7 +12,7 @@ const onCardBtnClick = event => {
     target.nextElementSibling.classList.toggle('--visible');
   }
   if (preventCardEl !== null) {
-    preventCardEl.classList.remove('--visible');
+    // preventCardEl.classList.remove('--visible');
     console.log(preventCardEl);
   }
   if (target.classList.contains('--line-referer')) {

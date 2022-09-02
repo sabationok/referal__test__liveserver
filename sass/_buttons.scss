@@ -26,12 +26,12 @@
     }
     &:focus,
     &:active {
-      & +.nav__list {
-        opacity: 1;
-        transform: scaleX(1);
-        visibility: visible;
-        pointer-events: all;
-      }
+      // & +.nav__list {
+      //   opacity: 1;
+      //   transform: scaleX(1);
+      //   visibility: visible;
+      //   pointer-events: all;
+      // }
     }
   }
   &.--decision {

@@ -3,7 +3,6 @@
     display: block;
     position: relative;
 
-    
     & .nav {
       &__list {
         display: block;
@@ -27,6 +26,13 @@
         transition: transform var(--timing-function__main),
           opacity var(--timing-function__main),
           visibility var(--timing-function__main);
+
+        &.--is-open {
+          transform: scaleX(1);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
       }
       &__link {
         display: block;
