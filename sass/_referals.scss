@@ -3,33 +3,15 @@
   flex-direction: column;
   gap: 8px;
 
-  position: relative;
+  width: 100%;
+  padding: 8px;
 
-  // margin-left: auto;
-  // width: calc(100% - 16px);
-
-  // transform-origin: right;
-  // transform: scaleX(0);
-  // transition: var(--timing-function__main);
-  // & > .cards-container {
-  //   display: none;
-  //   overflow: hidden;
-  //   max-height: 0;
-  //   &:hover,
-  //   &:focus {
-  //     display: block;
-  //     max-height: fit-content;
-  //   }
-  // }
-  // &:hover {
-  // }
   & .cards-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
-  
-    position: relative;
 
+    position: relative;
 
     max-height: 0;
     pointer-events: none;
@@ -45,60 +27,6 @@
       pointer-events: all;
     }
   }
-
-  &.--line-1 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    padding: 8px;
-  }
-  // &.--line-2 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-  //   // & > .--line-3 {
-  //   //   display: none;
-  //   // }
-  //   // & > .card {
-  //   //   transform: scaleX(0);
-  //   // }
-  //   // &:hover {
-  //   //   & > .--line-3 {
-  //   //     display: flex;
-  //   //     & > .card {
-  //   //       pointer-events: all;
-  //   //       transform: scale(1);
-  //   //     }
-  //   //   }
-  //   // }
-  // }
-  // &.--line-3 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-
-  // }
-  // &.--line-4 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-
-  // }
-  // &.--line-5 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-  // }
-  // &.--line-6 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-  // }
-  // &.--line-7 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-  // }
-  // &.--line-8 {
-  //   margin-left: auto;
-  //   width: calc(100% - 16px);
-
-  // }
 
   & .card {
     display: flex;

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* ======================================= GENERAL */
-@import '~node_modules/modern-normalize/modern-normalize.css';
 html {
   box-sizing: border-box;
   /* відміняє синій фон при дотику по обєктах на тачскірінах */
@@ -23,6 +22,9 @@ body {
   margin: 0;
 }
 
+.section {
+  margin-bottom: 8px;
+}
 .section.--1 {
   flex-grow: 2;
   flex-basis: 900px;
@@ -385,7 +387,7 @@ button {
   background-color: var(--block-header-bckgrnd-clr);
 }
 .block .content {
-  height: calc(100% - 45px);
+  max-height: calc(100% - 45px);
   position: relative;
   background-color: var(--background_clr__second);
 }
@@ -400,14 +402,10 @@ button {
   background-color: var(--block-footer-bckgrnd-clr);
 }
 .block.--balans {
-  height: 100%;
-  min-height: 200px;
-  max-height: 400px;
+  height: 100px;
 }
 .block.--referals {
-  height: 100%;
-  min-height: 200px;
-  max-height: 400px;
+  height: 300px;
 }
 .block.--invite {
   min-height: 200px;
@@ -991,7 +989,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  position: relative;
+  width: 100%;
+  padding: 8px;
 }
 .card-list .cards-container {
   display: flex;
@@ -1009,13 +1008,6 @@ button {
   max-height: fit-content;
   opacity: 1;
   pointer-events: all;
-}
-.card-list.--line-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  padding: 8px;
 }
 .card-list .card {
   display: flex;

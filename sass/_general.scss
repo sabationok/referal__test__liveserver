@@ -1,4 +1,4 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+// @import '~node_modules/modern-normalize/modern-normalize.css';
 html {
   box-sizing: border-box;
   /* відміняє синій фон при дотику по обєктах на тачскірінах */
@@ -24,6 +24,7 @@ body {
   margin: 0;
 }
 .section {
+  margin-bottom: 8px;
   &.--1 {
     flex-grow: 2;
     flex-basis: 900px;
