@@ -26,7 +26,8 @@
   &__overflow {
     overflow: auto;
 
-    // width: 100%;
+    width: 100%;
+    height: 100%;
     // max-height: 150px;
   }
   /* загальні */
@@ -44,7 +45,7 @@
     background-color: var(--block-header-bckgrnd-clr);
   }
   & .content {
-    // height: calc(100% - 45px);
+    height: calc(100% - 45px);
     position: relative;
     background-color: var(--background_clr__second);
   }
@@ -62,18 +63,18 @@
   }
   &.--balans {
     height: 100%;
-    min-height: 400px;
-    max-height: 600px;
+    min-height: 200px;
+    max-height: 400px;
 
    
-    @media screen and (max-width: 480px) {
-      height: 400px;
-    }
+    // @media screen and (max-width: 480px) {
+    //   height: 400px;
+    // }
   }
   &.--referals {
     height: 100%;
-    min-height: 500px;
-    // max-height: 150px;
+    min-height: 200px;
+    max-height: 400px;
 
     
     // @media screen and (max-width: 480px) {
